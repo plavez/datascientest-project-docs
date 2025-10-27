@@ -1,4 +1,5 @@
-graph TD
+
+```graph TD
     A[Terraform] --> B[kind-dev Cluster]
     A --> C[kind-prod Cluster]
     B --> D[Argo CD (dev)]
@@ -6,7 +7,7 @@ graph TD
     D --> F[Helm Charts / Applications]
     E --> F
     F --> G[Prometheus & Grafana]
-
+```
 
 
 # Step 1 – Specifications & Organization
