@@ -3,8 +3,8 @@
 graph TD
     A[Terraform] --> B[kind-dev Cluster]
     A --> C[kind-prod Cluster]
-    B --> D[Argo CD (dev)]
-    C --> E[Argo CD (prod)]
+    B --> D[ArgoCD_dev]
+    C --> E[ArgoCD_prod]
     D --> F[Helm Charts / Applications]
     E --> F
     F --> G[Prometheus & Grafana]
