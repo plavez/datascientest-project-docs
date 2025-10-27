@@ -9,6 +9,15 @@ graph TD
     E --> F
     F --> G[Prometheus & Grafana]
 ```
+**Legend & Flow Description**
+1. **Terraform** provisions two local Kubernetes clusters (`kind-dev` and `kind-prod`).
+2. In each cluster, **Argo CD** is deployed and configured as a GitOps controller.
+3. **ArgoCD_dev** and **ArgoCD_prod** synchronize Helm applications from the Git repository.
+4. Applications are packaged using **Helm Charts** with environment-specific `values_dev.yaml` and `values_prod.yaml`.
+5. **Prometheus & Grafana** provide centralized monitoring and visualization for both environments.
+
+*Data and configuration flow:*
+Git → Argo CD → Kubernetes → Prometheus/Grafana
 
 
 # Step 1 – Specifications & Organization
