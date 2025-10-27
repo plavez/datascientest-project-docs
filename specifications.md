@@ -1,5 +1,6 @@
 
-```graph TD
+```mermaid
+graph TD
     A[Terraform] --> B[kind-dev Cluster]
     A --> C[kind-prod Cluster]
     B --> D[Argo CD (dev)]
